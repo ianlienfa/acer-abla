@@ -55,6 +55,9 @@ class DiscreteAgent(Agent):
                         self.learning_iteration(trajectory)
             if self.verbose:
                 print(", episode rewards {}".format(episode_rewards))
+                f = open("rewards.txt", "a")
+                f.write("{} ".format(episode_rewards))
+                f.close()
 
     def learning_iteration(self, trajectory):
         """
