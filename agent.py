@@ -55,7 +55,7 @@ class DiscreteAgent(Agent):
                         self.learning_iteration(trajectory)
             if self.verbose:
                 print(", episode rewards {}".format(episode_rewards))
-                f = open("rewards.txt", "a")
+                f = open("constraint.txt", "a")
                 f.write("{} ".format(episode_rewards))
                 f.close()
 
@@ -98,9 +98,9 @@ class DiscreteAgent(Agent):
             critic_loss = (action_values.gather(-1, action_indices) - Variable(retrace_action_value)).pow(2)
             critic_loss.mean().backward(retain_graph=True)
 
-            # Entropy
-            entropy_loss = ENTROPY_REGULARIZATION * (action_probabilities * action_probabilities.log()).sum(-1)
-            entropy_loss.mean().backward(retain_graph=True)
+            # # Entropy
+            # entropy_loss = ENTROPY_REGULARIZATION * (action_probabilities * action_probabilities.log()).sum(-1)
+            # entropy_loss.mean().backward(retain_graph=True)
 
             retrace_action_value = importance_weights.gather(-1, action_indices.data).clamp(max=1.) * \
                                    (retrace_action_value - action_values.gather(-1, action_indices).data) + value

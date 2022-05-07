@@ -2,6 +2,8 @@ import brain
 import agent
 from torch import multiprocessing as mp
 from core import *
+import sys
+
 
 
 def run_agent(shared_brain, render=False, verbose=False):
@@ -23,13 +25,18 @@ def run_agent(shared_brain, render=False, verbose=False):
         local_agent = agent.ContinuousAgent(shared_brain, render, verbose)
     local_agent.run()
 
-def create_history_files():
-    f = open('reward.txt', 'w')
+def create_history_files(filename="reward"):
+    # filename = "rewards" + filename
+    filename += ".txt"
+    f = open(filename, 'w')
     f.close()
 
 if __name__ == "__main__":
-
-    create_history_files()
+    if(len(sys.argv) >= 4):
+        if(sys.argv[2] == "-f"):
+            create_history_files(sys.argv[3])
+    else:
+        create_history_files()
 
     if NUMBER_OF_AGENTS == 1:
         # Don't bother with multiprocessing if only one agent
