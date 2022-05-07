@@ -23,11 +23,17 @@ def run_agent(shared_brain, render=False, verbose=False):
         local_agent = agent.ContinuousAgent(shared_brain, render, verbose)
     local_agent.run()
 
+def create_history_files():
+    f = open('reward.txt', 'w')
+    f.close()
 
 if __name__ == "__main__":
+
+    create_history_files()
+
     if NUMBER_OF_AGENTS == 1:
         # Don't bother with multiprocessing if only one agent
-        run_agent(brain.brain, render=True)
+        run_agent(brain.brain, render=False, verbose = True)
     else:
         processes = [mp.Process(target=run_agent, args=(brain.brain, False, True))
                      for _ in range(NUMBER_OF_AGENTS)]
