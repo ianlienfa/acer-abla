@@ -5,6 +5,7 @@ from torch.autograd import Variable
 from brain import DiscreteActorCritic, ContinuousActorCritic
 from ornstein_uhlenbeck import OrnsteinUhlenbeckProcess
 from core import *
+import core
 
 
 class Agent:
@@ -55,7 +56,7 @@ class DiscreteAgent(Agent):
                         self.learning_iteration(trajectory)
             if self.verbose:
                 print(", episode rewards {}".format(episode_rewards))
-                f = open("constraint.txt", "a")
+                f = open(core.reward_file, "a")
                 f.write("{} ".format(episode_rewards))
                 f.close()
 
