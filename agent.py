@@ -32,6 +32,13 @@ class Agent:
         self.optimizer = torch.optim.Adam(brain.actor_critic.parameters(),
                                           lr=LEARNING_RATE)
 
+    def reward_tracking(self, episode_rewards):                    
+        filename = core.tracker_file_prefix + str(os.getpid()) + ".txt"                       
+        print("filename: ", filename)
+        f = open(filename, "a")                
+        f.write("{} ".format(episode_rewards))
+        f.close()
+
 
 class DiscreteAgent(Agent):
     def __init__(self, brain, render=True, verbose=True):
@@ -57,11 +64,7 @@ class DiscreteAgent(Agent):
                         self.learning_iteration(trajectory)
             if self.verbose:
                 print(", episode rewards {}".format(episode_rewards))        
-                filename = core.tracker_file_prefix + str(os.getpid()) + ".txt"                       
-                print("filename: ", filename)
-                f = open(filename, "a")                
-                f.write("{} ".format(episode_rewards))
-                f.close()
+                self.reward_tracking(episode_rewards)
 
     def learning_iteration(self, trajectory):
         """
@@ -207,11 +210,7 @@ class ContinuousAgent(Agent):
             self.noise.reset()
             if self.verbose:
                 print(", episode rewards {}".format(episode_rewards))        
-                filename = core.tracker_file_prefix + str(os.getpid()) + ".txt"                       
-                print("filename: ", filename)
-                f = open(filename, "a")                
-                f.write("{} ".format(episode_rewards))
-                f.close()
+                self.reward_tracking(episode_rewards)
 
     def explore(self, actor_critic, noise_ratio=0.):
         """
