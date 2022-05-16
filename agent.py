@@ -56,8 +56,10 @@ class DiscreteAgent(Agent):
                     if trajectory:
                         self.learning_iteration(trajectory)
             if self.verbose:
-                print(", episode rewards {}".format(episode_rewards))                
-                f = open(core.tracker_file_prefix + str(os.getpid()), "a")                
+                print(", episode rewards {}".format(episode_rewards))        
+                filename = core.tracker_file_prefix + str(os.getpid()) + ".txt"                       
+                print("filename: ", filename)
+                f = open(filename, "a")                
                 f.write("{} ".format(episode_rewards))
                 f.close()
 
@@ -101,8 +103,8 @@ class DiscreteAgent(Agent):
             critic_loss.mean().backward(retain_graph=True)
 
             # # Entropy
-            # entropy_loss = ENTROPY_REGULARIZATION * (action_probabilities * action_probabilities.log()).sum(-1)
-            # entropy_loss.mean().backward(retain_graph=True)
+            entropy_loss = ENTROPY_REGULARIZATION * (action_probabilities * action_probabilities.log()).sum(-1)
+            entropy_loss.mean().backward(retain_graph=True)
 
             retrace_action_value = importance_weights.gather(-1, action_indices.data).clamp(max=1.) * \
                                    (retrace_action_value - action_values.gather(-1, action_indices).data) + value
@@ -204,7 +206,12 @@ class ContinuousAgent(Agent):
                         self.learning_iteration(trajectory)
             self.noise.reset()
             if self.verbose:
-                print(", episode rewards {:.2f}".format(episode_rewards))
+                print(", episode rewards {}".format(episode_rewards))        
+                filename = core.tracker_file_prefix + str(os.getpid()) + ".txt"                       
+                print("filename: ", filename)
+                f = open(filename, "a")                
+                f.write("{} ".format(episode_rewards))
+                f.close()
 
     def explore(self, actor_critic, noise_ratio=0.):
         """
