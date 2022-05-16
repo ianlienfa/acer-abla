@@ -6,6 +6,7 @@ from brain import DiscreteActorCritic, ContinuousActorCritic
 from ornstein_uhlenbeck import OrnsteinUhlenbeckProcess
 from core import *
 import core
+import os
 
 
 class Agent:
@@ -55,8 +56,8 @@ class DiscreteAgent(Agent):
                     if trajectory:
                         self.learning_iteration(trajectory)
             if self.verbose:
-                print(", episode rewards {}".format(episode_rewards))
-                f = open(core.reward_file, "a")
+                print(", episode rewards {}".format(episode_rewards))                
+                f = open(core.tracker_file_prefix + str(os.getpid()), "a")                
                 f.write("{} ".format(episode_rewards))
                 f.close()
 

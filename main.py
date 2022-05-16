@@ -4,6 +4,8 @@ from torch import multiprocessing as mp
 from core import *
 import core
 import sys
+import os
+
 
 
 
@@ -26,11 +28,14 @@ def run_agent(shared_brain, render=False, verbose=False):
         local_agent = agent.ContinuousAgent(shared_brain, render, verbose)
     local_agent.run()
 
-def create_history_files(filename="reward"):    
-    print(f"Writing log into: {filename}")    
-    core.reward_file = filename
-    core.reward_file += ".txt"
-    f = open(core.reward_file, 'w')
+def setup_history_files(filename="reward"):
+    if(os.path.isdir("./"+filename) == False):
+        print(f"Writing log into: {filename}/")    
+        os.mkdir("./"+filename)
+    core.tracker_file_prefix = filename + "/" + filename + "_"
+
+def create_history_files(tracker_file_prefix, pid=""):  
+    f = open(tracker_file_prefix + str(pid) + ".txt" , 'w')
     f.close()
 
 if __name__ == "__main__":    
@@ -38,18 +43,21 @@ if __name__ == "__main__":
         option = sys.argv[1]
         variable = sys.argv[2]
         if(option == "-f"):
-            create_history_files(variable)
+            file_option_on = True
+            setup_history_files(variable)
     else:
-        create_history_files()
+        setup_history_files()
 
     if NUMBER_OF_AGENTS == 1:
         # Don't bother with multiprocessing if only one agent
+        create_history_files(core.tracker_file_prefix, os.getpid())
         run_agent(brain.brain, render=False, verbose = True)
     else:
         processes = [mp.Process(target=run_agent, args=(brain.brain, False, True))
                      for _ in range(NUMBER_OF_AGENTS)]
         for process in processes:
             process.start()
+            create_history_files(core.tracker_file_prefix, process.pid)
 
         for process in processes:
             process.join()
