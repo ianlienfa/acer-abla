@@ -93,6 +93,7 @@ class ContinuousActorCritic(ActorCritic):
         self.sdn_action_input_layer = torch.nn.Linear(ACTION_SPACE_DIM, 32)
         self.sdn_hidden_layer = torch.nn.Linear(32, 32)
         self.sdn_advantage_layer = torch.nn.Linear(32, 1)
+        
 
     def forward(self, states, actions=None):
         """
@@ -113,7 +114,7 @@ class ContinuousActorCritic(ActorCritic):
             The value of the policy according to the critic.
         action_value : torch.Tensor
             The action-value of the policy according to the critic.
-        """
+        """        
         hidden = F.relu(self.policy_input_layer(states))
         hidden = F.relu(self.policy_hidden_layer(hidden))
         policy_mean = self.policy_mean_layer(hidden)
@@ -133,7 +134,7 @@ class ContinuousActorCritic(ActorCritic):
             return policy_mean, value, None
 
     def sdn_forward(self, states, actions):
-        hidden = F.relu(self.sdn_state_input_layer(states) + self.sdn_action_input_layer(F.tanh(actions)))
+        hidden = F.relu(self.sdn_state_input_layer(states) + self.sdn_action_input_layer(torch.tanh(actions)))
         hidden = F.relu(self.sdn_hidden_layer(hidden))
         advantage = self.sdn_advantage_layer(hidden)
         return advantage

@@ -215,8 +215,8 @@ class ContinuousAgent(Agent):
             The actor-critic model to use to explore.
         noise_ratio : float in [0, 1], optional
             What fraction of the action should be exploration noise?
-        """
-        state = torch.FloatTensor(self.env.env.state)
+        """        
+        state = torch.FloatTensor(self.env.env.state).reshape(-1, STATE_SPACE_DIM)    
         trajectory = []
         for step in range(MAX_STEPS_BEFORE_UPDATE):
             policy_mean, *_ = actor_critic(Variable(state))
@@ -234,6 +234,7 @@ class ContinuousAgent(Agent):
             scaled_action = float(self.env.action_space.low) \
                             + float(self.env.action_space.high - self.env.action_space.low) * torch.sigmoid(action)
             next_state, reward, done, _ = self.env.step(scaled_action.numpy())
+            next_state = next_state.reshape(-1, STATE_SPACE_DIM)
             next_state = torch.from_numpy(next_state).float()
             if self.render:
                 self.env.render()
@@ -246,7 +247,7 @@ class ContinuousAgent(Agent):
             self.buffer.add(transition)
             trajectory.append(transition)
             if done:
-                self.env.reset()
+                state = self.env.reset()
                 break
             else:
                 state = next_state
