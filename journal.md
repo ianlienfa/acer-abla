@@ -20,3 +20,5 @@
 * actor loss 的 clamp 拿掉
 * 用 V(s) 跟 Q-ret 的 mse 去做update
 * TRUNCATION_PARAMETER
+
+* audrey
