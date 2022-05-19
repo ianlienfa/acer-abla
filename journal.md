@@ -18,5 +18,5 @@
 * 改 1/d -> 1 / e^d 
 * opc 改 ret
 * actor loss 的 clamp 拿掉
-* 用 V(s) 跟 Q-ret 的 mse 去做update
+* 用 V(s) 跟 Q-ret 的 mse 去做update (看P.8 V^target, Appendix D有寫導出的方法)
 * TRUNCATION_PARAMETER
