@@ -116,7 +116,7 @@ The corresponding estimate for $Q^\pi$ of SDN is computed as follows:
 To train the network, the paper as well uses $Q^{ret}$ for target action-value.
 For the state value $V^\pi$, they uses the following target:
 \[
-    V^{target}(x_t) = \min\{1, \frac{\pi(a_t|x_t)}{\mu(a_t | x_t)}\} (Q^{ret}(x_t, a_t) - V_{\theta_v}(x_t))
+    V^{target}(x_t) = \min\{1, \frac{\pi(a_t|x_t)}{\mu(a_t | x_t)}\} (Q^{ret}(x_t, a_t) - Q_{\theta_v}(x_t)) + V_{\theta_v}(x_t)
 \]
 , which is derived by applying the trunction and bias correction trick like what have been done on the policy gradient update.
 

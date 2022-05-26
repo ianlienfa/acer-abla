@@ -25,3 +25,5 @@
 * trust region constraint 拔掉
 * SDN paper
 * ret 改 opc
+
+* Replace SDN with two networks (Q and V), update the Q network with $Q^{ret}$ as well but update V with another rule
