@@ -63,3 +63,4 @@ INITIAL_STANDARD_DEVIATION = 5.
 # For easy testing
 tracker_file_prefix = None
 file_option_on = False
+SEED = 100

@@ -1,6 +1,8 @@
 import brain
 import agent
 from torch import multiprocessing as mp
+import torch
+import numpy as np
 from core import *
 import core
 import sys
@@ -47,6 +49,10 @@ if __name__ == "__main__":
             setup_history_files(variable)
     else:
         setup_history_files()
+
+    # fix random seed
+    torch.random.manual_seed(SEED)
+    np.random.seed(SEED)
 
     if NUMBER_OF_AGENTS == 1:
         # Don't bother with multiprocessing if only one agent
