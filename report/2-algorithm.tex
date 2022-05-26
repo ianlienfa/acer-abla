@@ -72,6 +72,32 @@ $$
 $$
 As the above, it turned to updated actor critic by Q estimates, when c = 0. And it turned to updated policy gradient by Retrace, when  c = $\infty$.
 
+In order to reduce high variance of the policy updates in actor-critic, they solve the problem by retricting stepsize. However, the existing method of TRPO is time consuming, they introduced a new TRPO method. The main difference between TRPO and improved TRPO is that they update the policy by running average of past policies which is the average policy network. 
+There are two seperate parts of average policy network output, one is the probability distribution $f$ and the other is the parameters $\phi_{\theta}$ of distribution $f$. The relationship between these two terms is :
+$\phi_{\theta}: \pi(\cdot \mid x)=f\left(\cdot \mid \phi_{\theta}(x)\right)$
+Each episode, they update policy by $\phi_{\theta}$. The following equation is the ACER policy gradient with respect to $\phi$ :
+$$
+\begin{aligned}
+    \widehat{g}_{t}^{\text {acer }}=& \bar{\rho}_{t} \nabla_{\phi_{\theta}\left(x_{t}\right)} \log f\left(a_{t} \mid \phi_{\theta}(x)\right)\left[Q^{\mathrm{ret}}\left(x_{t}, a_{t}\right)-V_{\theta_{v}}\left(x_{t}\right)\right] \\
+    &+\underset{a \sim \pi}{\mathbb{E}}\left(\left[\frac{\rho_{t}(a)-c}{\rho_{t}(a)}\right]_{+} \nabla_{\phi_{\theta}\left(x_{t}\right)} \log f\left(a_{t} \mid \phi_{\theta}(x)\right)\left[Q_{\theta_{v}}\left(x_{t}, a\right)-V_{\theta_{v}}\left(x_{t}\right)\right]\right)
+    \end{aligned}
+$$
+As for the trust region update, in the first stage, they solved optimization problem by KL divergence :
+$$
+\begin{array}{ll}
+    \underset{z}{\operatorname{minimize}} & \frac{1}{2}\left\|\hat{g}_{t}^{\text {acer }}-z\right\|_{2}^{2} \\
+    \text { subject to } & \nabla_{\phi_{\theta}\left(x_{t}\right)} D_{K L}\left[f\left(\cdot \mid \phi_{\theta_{a}}\left(x_{t}\right)\right) \| f\left(\cdot \mid \phi_{\theta}\left(x_{t}\right)\right)\right]^{T} z \leq \delta
+    \end{array}
+$$
+Because the constraint is linear, they don't need to calculate the Hessian. With the advantages, it can solved by the KKT condition easily. Letting $k=\nabla_{\phi_{\theta}\left(x_{t}\right)} D_{K L}\left[f \left(\cdot \mid \phi_{\theta_{a}}\left(x_{t}\right) \| f\left(\cdot \mid \phi_{\theta}\left(x_{t}\right)\right]\right.\right.$, the solution is :
+$$
+z^{*}=\hat{g}_{t}^{\text {acer }}-\max \left\{0, \frac{k^{T} \hat{g}_{t}^{\text {acer }}-\delta}{\|k\|_{2}^{2}}\right\} k
+$$
+If the constraint is satisfied, the gradient would not change.
+ 
+In the second stage, the trust region step is conducted in the space of the statistics of the distribution $f$ rather then the space of the policy parameters. 
+It can successfully avoid additional back-propagation by the policy network.
+
 \begin{figure}
 \caption{The Stochastic Deuling Network takes in a state and an action, 
 then output the corresponding value and the action-value with the help of value and advantages}

@@ -14,9 +14,14 @@
     * 圖在下次跑的時候會被覆蓋，建議跑下一個測資前先截圖，或是用其他filename跑
 
 ## May 13 
-* 拿掉bias term試試看
-* 改 1/d -> 1 / e^d 
-* opc 改 ret
-* actor loss 的 clamp 拿掉
-* 用 V(s) 跟 Q-ret 的 mse 去做update (看P.8 V^target, Appendix D有寫導出的方法)
-* TRUNCATION_PARAMETER
+* 拿掉bias term試試看 (done)
+* 改 1/d -> 1 / e^d (done)
+* opc 改 ret (done)
+* actor loss 的 clamp 拿掉 (done)
+<!-- * 用 V(s) 跟 Q-ret 的 mse 去做update (看P.8 V^target, Appendix D有寫導出的方法) -->
+* TRUNCATION_PARAMETER (done)
+
+## May 26
+* trust region constraint 拔掉
+* SDN paper
+* ret 改 opc

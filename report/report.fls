@@ -1,8 +1,8 @@
-PWD /Users/linenyan/Downloads/RL2022-implementation-project-template-2
+PWD /Users/linenyan/Documents/Coding/acer-abla/report
 INPUT /usr/local/texlive/2022/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/linenyan/Downloads/RL2022-implementation-project-template-2/report.tex
+INPUT /Users/linenyan/Documents/Coding/acer-abla/report/report.tex
 OUTPUT report.log
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
