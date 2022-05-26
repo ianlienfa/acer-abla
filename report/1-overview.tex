@@ -1,0 +1,23 @@
+\section{Problem Overview}
+\label{section:intro}
+This paper proposed an algorithm called ACER that combines experience replay and TRPO-like gradient update.
+
+
+The goal of the problem is to maximize the discounted return $R_t = \sum_{i \ge 0}{\gamma^i r_{t+i}}$ in expectation 
+
+Notation:
+For the value function:
+$V^{\pi}\left(x_{t}\right)=\mathbb{E}_{a_{t}}\left[Q^{\pi}\left(x_{t}, a_{t}\right) \mid x_{t}\right]$
+
+And for the action-value function:
+$Q^{\pi}\left(x_{t}, a_{t}\right)=\mathbb{E}_{x_{t+1: \infty}, a_{t+1: \infty}}\left[R_{t} \mid x_{t}, a_{t}\right]$
+
+where the actions are determined by policy $\pi$
+
+ACER estimates its policy $\pi_{\theta}(a_t | x_t)$ and value function $V^\pi_{\theta_v}(x_t)$ with deep neural networks.
+
+
+
+
+
+
