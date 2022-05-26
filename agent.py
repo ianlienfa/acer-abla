@@ -310,8 +310,8 @@ class ContinuousAgent(Agent):
             torch.autograd.backward((policy_mean, policy_logsd), actor_gradients, retain_graph=True)
 
             # Critic
-            critic_loss = - Variable(retrace_action_value - action_value.data) * action_value \
-                          - Variable(importance_weights.clamp(max=1.) * (retrace_action_value - action_value.data)) * value
+            critic_loss = - Variable(retrace_action_value - action_value.data).pow(2) \
+                     - Variable(retrace_action_value - value.data).pow(2) * importance_weights
             critic_loss.mean().backward(retain_graph=True)
 
             # Entropy

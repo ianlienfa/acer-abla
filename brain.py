@@ -139,6 +139,55 @@ class ContinuousActorCritic(ActorCritic):
         advantage = self.sdn_advantage_layer(hidden)
         return advantage
 
+class ContinuousSeperateActorCritic(ActorCritic):
+    """
+    The non-SDN architecture
+    """
+    def __init__(self):
+        super().__init__()
+        self.state_input_layer = torch.nn.Linear(STATE_SPACE_DIM, 32)
+        self.action_input_layer = torch.nn.Linear(ACTION_SPACE_DIM, 32)
+        self.state_hidden_layer = torch.nn.Linear(32, 32)
+        self.policy_mean_layer = torch.nn.Linear(32, ACTION_SPACE_DIM)
+        self.value_layer = torch.nn.Linear(32, 1)
+        self.action_hidden_layer = torch.nn.Linear(64, 32)
+        self.action_value_layer = torch.nn.Linear(32, ACTION_SPACE_DIM)
+
+    def forward(self, states, actions=None):
+        """
+        Compute a forward pass in the network.
+
+        Parameters
+        ----------
+        states : torch.Tensor
+            The states for which the action probabilities and the action-values must be computed.
+        actions : torch.Tensor, optional
+            The actions for which the action-values must be computed.
+
+        Returns
+        -------
+        action_probabilities : torch.Tensor
+            The action probabilities of the policy according to the actor.
+        value : torch.Tensor
+            The value of the policy according to the critic.
+        action_value : torch.Tensor
+            The action-value of the policy according to the critic.
+        """ 
+        # pi_network
+        hidden = F.relu(self.state_input_layer(states))
+        hidden = F.relu(self.state_hidden_layer(hidden))
+        policy_mean = self.policy_mean_layer(hidden)
+
+        # q_network
+        q_hidden = F.relu(self.state_input_layer(states) + self.action_input_layer(actions)) # (,64)
+        q_hidden = F.relu(self.action_hidden_layer(q_hidden)) #(, 32)
+        action_value = self.action_value_layer(q_hidden) #(32, ACTION_DIM)
+
+        # val_network
+        value = self.value_layer(hidden)
+
+        return policy_mean, value, action_value
+
 
 class Brain:
     """
