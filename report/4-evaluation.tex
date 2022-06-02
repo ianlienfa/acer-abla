@@ -4,8 +4,10 @@ Please showcase your empirical results in this section. Please clearly specify w
 
 
 1. remove the entropy term
-2. consider the parameter \emph{trust region constraint}
+2. remove \emph{trust region constraint}
+In the environment of CartPole and MountainCarContinuous, the removal of trust region constraint from the algorithm seems to be better, especially in the MountainCarContinuous environment.
 3. drop the bias term 
+In both environment, the result with bias term dropped turns out to be significantly worse.
 4. remove the clamping on the actor loss
 5. change the \emph{truncation parameter}
 6. change $Q_opc$ to $Q_ret$ 
