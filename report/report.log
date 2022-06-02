@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.5)  26 MAY 2022 15:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.5.5)  2 JUN 2022 16:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -245,9 +245,45 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen165
 \Gin@req@width=\dimen166
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen167
+\captionmargin=\dimen168
+\caption@leftmargin=\dimen169
+\caption@rightmargin=\dimen170
+\caption@width=\dimen171
+\caption@indent=\dimen172
+\caption@parindent=\dimen173
+\caption@hangindent=\dimen174
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count280
+\c@continuedfloat=\count281
+Package caption Info: hyperref package is loaded.
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip58
+\subfigcapskip=\skip59
+\subfigcaptopadj=\dimen175
+\subfigbottomskip=\skip60
+\subfigcapmargin=\dimen176
+\subfiglabelskip=\skip61
+\c@subfigure=\count282
+\c@lofdepth=\count283
+\c@subtable=\count284
+\c@lotdepth=\count285
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/local/texlive/2022/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip62
+\subfig@bottom=\skip63
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2021/10/15 v2.17l AMS math features
-\@mathmargin=\skip58
+\@mathmargin=\skip64
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -255,47 +291,47 @@ Package: amstext 2021/08/26 v2.01 AMS text
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks23
-\ex@=\dimen167
+\ex@=\dimen177
 )) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen168
+\pmbraise@=\dimen178
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2021/08/26 v2.02 operator names
 )
-\inf@bad=\count280
+\inf@bad=\count286
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count281
-\leftroot@=\count282
+\uproot@=\count287
+\leftroot@=\count288
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count283
-\DOTSCASE@=\count284
+\classnum@=\count289
+\DOTSCASE@=\count290
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
 \Mathstrutbox@=\box51
 \strutbox@=\box52
-\big@size=\dimen169
+\big@size=\dimen179
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count285
-\c@MaxMatrixCols=\count286
+\macc@depth=\count291
+\c@MaxMatrixCols=\count292
 \dotsspace@=\muskip17
-\c@parentequation=\count287
-\dspbrk@lvl=\count288
+\c@parentequation=\count293
+\dspbrk@lvl=\count294
 \tag@help=\toks24
-\row@=\count289
-\column@=\count290
-\maxfields@=\count291
+\row@=\count295
+\column@=\count296
+\maxfields@=\count297
 \andhelp@=\toks25
-\eqnshift@=\dimen170
-\alignsep@=\dimen171
-\tagshift@=\dimen172
-\tagwidth@=\dimen173
-\totwidth@=\dimen174
-\lineht@=\dimen175
+\eqnshift@=\dimen180
+\alignsep@=\dimen181
+\tagshift@=\dimen182
+\tagwidth@=\dimen183
+\totwidth@=\dimen184
+\lineht@=\dimen185
 \@envbody=\toks26
-\multlinegap=\skip59
-\multlinetaggap=\skip60
+\multlinegap=\skip65
+\multlinetaggap=\skip66
 \mathdisplay@stack=\toks27
 LaTeX Info: Redefining \[ on input line 2938.
 LaTeX Info: Redefining \] on input line 2939.
@@ -303,29 +339,29 @@ LaTeX Info: Redefining \] on input line 2939.
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count292
+\l__color_backend_stack_int=\count298
 \l__pdf_internal_box=\box53
 ) (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -393,7 +429,7 @@ LaTeX Font Info:    ... okay on input line 51.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 51.
+Package hyperref Info: Link coloring OFF on input line 54.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
@@ -401,27 +437,27 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/local/texlive/2022/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count293
+\c@section@level=\count299
 )
-LaTeX Info: Redefining \ref on input line 51.
-LaTeX Info: Redefining \pageref on input line 51.
-LaTeX Info: Redefining \nameref on input line 51.
+LaTeX Info: Redefining \ref on input line 54.
+LaTeX Info: Redefining \pageref on input line 54.
+LaTeX Info: Redefining \nameref on input line 54.
  (./report.out) (./report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 51.
-Package microtype Info: Applying patch `item' on input line 51.
-Package microtype Info: Applying patch `toc' on input line 51.
-Package microtype Info: Applying patch `eqnum' on input line 51.
-Package microtype Info: Applying patch `footnote' on input line 51.
+LaTeX Info: Redefining \microtypecontext on input line 54.
+Package microtype Info: Applying patch `item' on input line 54.
+Package microtype Info: Applying patch `toc' on input line 54.
+Package microtype Info: Applying patch `eqnum' on input line 54.
+Package microtype Info: Applying patch `footnote' on input line 54.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 51.
+LaTeX Info: Redefining \showhyphens on input line 54.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -429,38 +465,42 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 ) (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count294
-\scratchdimen=\dimen176
+\scratchcounter=\count300
+\scratchdimen=\dimen186
 \scratchbox=\box54
-\nofMPsegments=\count295
-\nofMParguments=\count296
+\nofMPsegments=\count301
+\nofMParguments=\count302
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count297
-\MPscratchDim=\dimen177
-\MPnumerator=\count298
-\makeMPintoPDFobject=\count299
+\MPscratchCnt=\count303
+\MPscratchDim=\dimen187
+\MPnumerator=\count304
+\makeMPintoPDFobject=\count305
 \everyMPtoPDFconversion=\toks29
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-)) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfigure package is loaded.
+Package caption Info: End \AtBeginDocument code.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 54.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 57.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 54.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 57.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 54.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 57.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
@@ -476,12 +516,98 @@ Overfull \hbox (55.87633pt too wide) detected at line 72
 [][] \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 5[] \OML/cmm/m/it/10 log^^Y[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[] \OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )[\OML/cmm/m/it/10 Q[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]; a[]\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )] + []([[]][] \OMS/cmsy/m/n/10 5[] \OML/cmm/m/it/10 log^^Y[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a \OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )(\OML/cmm/m/it/10 Q[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]; a\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )))
  []
 
-<./images/SDN.png, id=43, 720.6925pt x 420.57124pt>
+<./images/SDN.png, id=44, 720.6925pt x 420.57124pt>
 File: ./images/SDN.png Graphic file (type png)
 <use ./images/SDN.png>
 Package pdftex.def Info: ./images/SDN.png  used on input line 104.
 (pdftex.def)             Requested size: 360.34537pt x 210.28511pt.
-[2]) (./3-implementation.tex) (./4-evaluation.tex) (./5-conclusion.tex [3 <./images/SDN.png>]
+[2]) (./3-implementation.tex [3 <./images/SDN.png>]) (./4-evaluation.tex
+<./images/continuous/clamp.jpg, id=56, 361.35pt x 361.35pt>
+File: ./images/continuous/clamp.jpg Graphic file (type jpg)
+<use ./images/continuous/clamp.jpg>
+Package pdftex.def Info: ./images/continuous/clamp.jpg  used on input line 21.
+(pdftex.def)             Requested size: 89.43654pt x 89.43301pt.
+<./images/continuous/e^d.jpg, id=57, 361.35pt x 361.35pt>
+File: ./images/continuous/e^d.jpg Graphic file (type jpg)
+<use ./images/continuous/e^d.jpg>
+Package pdftex.def Info: ./images/continuous/e^d.jpg  used on input line 26.
+(pdftex.def)             Requested size: 89.43654pt x 89.43301pt.
+<./images/continuous/no_bias_term.jpg, id=58, 361.35pt x 361.35pt>
+File: ./images/continuous/no_bias_term.jpg Graphic file (type jpg)
+<use ./images/continuous/no_bias_term.jpg>
+Package pdftex.def Info: ./images/continuous/no_bias_term.jpg  used on input line 31.
+(pdftex.def)             Requested size: 89.43654pt x 89.43301pt.
+<./images/continuous/no_trust_region.jpg, id=59, 361.35pt x 361.35pt>
+File: ./images/continuous/no_trust_region.jpg Graphic file (type jpg)
+<use ./images/continuous/no_trust_region.jpg>
+Package pdftex.def Info: ./images/continuous/no_trust_region.jpg  used on input line 36.
+(pdftex.def)             Requested size: 89.43654pt x 89.43301pt.
+<./images/continuous/continue_truncation_para=1.jpg, id=60, 361.35pt x 361.35pt>
+File: ./images/continuous/continue_truncation_para=1.jpg Graphic file (type jpg)
+<use ./images/continuous/continue_truncation_para=1.jpg>
+Package pdftex.def Info: ./images/continuous/continue_truncation_para=1.jpg  used on input line 46.
+(pdftex.def)             Requested size: 119.2467pt x 119.24586pt.
+<./images/continuous/continue_truncation_para=10.jpg, id=61, 361.35pt x 361.35pt>
+File: ./images/continuous/continue_truncation_para=10.jpg Graphic file (type jpg)
+<use ./images/continuous/continue_truncation_para=10.jpg>
+Package pdftex.def Info: ./images/continuous/continue_truncation_para=10.jpg  used on input line 51.
+(pdftex.def)             Requested size: 119.2467pt x 119.24586pt.
+<./images/continuous/continue_truncation_para=15.jpg, id=62, 361.35pt x 361.35pt>
+File: ./images/continuous/continue_truncation_para=15.jpg Graphic file (type jpg)
+<use ./images/continuous/continue_truncation_para=15.jpg>
+Package pdftex.def Info: ./images/continuous/continue_truncation_para=15.jpg  used on input line 56.
+(pdftex.def)             Requested size: 119.2467pt x 119.24586pt.
+<./images/continuous/opc2ret.jpg, id=63, 361.35pt x 361.35pt>
+File: ./images/continuous/opc2ret.jpg Graphic file (type jpg)
+<use ./images/continuous/opc2ret.jpg>
+Package pdftex.def Info: ./images/continuous/opc2ret.jpg  used on input line 68.
+(pdftex.def)             Requested size: 178.86702pt x 178.86604pt.
+<./images/continuous/ret2opc.jpg, id=64, 361.35pt x 361.35pt>
+File: ./images/continuous/ret2opc.jpg Graphic file (type jpg)
+<use ./images/continuous/ret2opc.jpg>
+Package pdftex.def Info: ./images/continuous/ret2opc.jpg  used on input line 73.
+(pdftex.def)             Requested size: 178.86702pt x 178.86604pt.
+<./images/continuous/nosdn.jpg, id=65, 361.35pt x 361.35pt>
+File: ./images/continuous/nosdn.jpg Graphic file (type jpg)
+<use ./images/continuous/nosdn.jpg>
+Package pdftex.def Info: ./images/continuous/nosdn.jpg  used on input line 82.
+(pdftex.def)             Requested size: 198.7425pt x 198.74312pt.
+<./images/discrete/D_TC=1.jpg, id=66, 361.35pt x 361.35pt>
+File: ./images/discrete/D_TC=1.jpg Graphic file (type jpg)
+<use ./images/discrete/D_TC=1.jpg>
+Package pdftex.def Info: ./images/discrete/D_TC=1.jpg  used on input line 92.
+(pdftex.def)             Requested size: 119.2467pt x 119.24586pt.
+<./images/discrete/D_TC=5.jpg, id=67, 361.35pt x 361.35pt>
+File: ./images/discrete/D_TC=5.jpg Graphic file (type jpg)
+<use ./images/discrete/D_TC=5.jpg>
+Package pdftex.def Info: ./images/discrete/D_TC=5.jpg  used on input line 97.
+(pdftex.def)             Requested size: 119.2467pt x 119.24586pt.
+<./images/discrete/D_TC=20.jpg, id=68, 361.35pt x 361.35pt>
+File: ./images/discrete/D_TC=20.jpg Graphic file (type jpg)
+<use ./images/discrete/D_TC=20.jpg>
+Package pdftex.def Info: ./images/discrete/D_TC=20.jpg  used on input line 102.
+(pdftex.def)             Requested size: 119.2467pt x 119.24586pt.
+<./images/discrete/D_clamp.jpg, id=69, 361.35pt x 361.35pt>
+File: ./images/discrete/D_clamp.jpg Graphic file (type jpg)
+<use ./images/discrete/D_clamp.jpg>
+Package pdftex.def Info: ./images/discrete/D_clamp.jpg  used on input line 113.
+(pdftex.def)             Requested size: 119.2467pt x 119.24586pt.
+<./images/discrete/no_bias_term.jpg, id=70, 361.35pt x 361.35pt>
+File: ./images/discrete/no_bias_term.jpg Graphic file (type jpg)
+<use ./images/discrete/no_bias_term.jpg>
+Package pdftex.def Info: ./images/discrete/no_bias_term.jpg  used on input line 118.
+(pdftex.def)             Requested size: 119.2467pt x 119.24586pt.
+<./images/discrete/no_trust_region.jpg, id=71, 361.35pt x 361.35pt>
+File: ./images/discrete/no_trust_region.jpg Graphic file (type jpg)
+<use ./images/discrete/no_trust_region.jpg>
+Package pdftex.def Info: ./images/discrete/no_trust_region.jpg  used on input line 123.
+(pdftex.def)             Requested size: 119.2467pt x 119.24586pt.
+<./images/discrete/D_ret2opc.jpg, id=72, 361.35pt x 361.35pt>
+File: ./images/discrete/D_ret2opc.jpg Graphic file (type jpg)
+<use ./images/discrete/D_ret2opc.jpg>
+Package pdftex.def Info: ./images/discrete/D_ret2opc.jpg  used on input line 132.
+(pdftex.def)             Requested size: 198.7425pt x 198.74312pt.
+) (./5-conclusion.tex
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 5.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
@@ -489,23 +615,23 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 
 Package natbib Warning: Empty `thebibliography' environment on input line 8.
 
-) [4] (./report.aux)
+) [4 <./images/continuous/clamp.jpg> <./images/continuous/e^d.jpg> <./images/continuous/no_bias_term.jpg> <./images/continuous/no_trust_region.jpg> <./images/continuous/continue_truncation_para=1.jpg> <./images/continuous/continue_truncation_para=10.jpg> <./images/continuous/continue_truncation_para=15.jpg>] [5 <./images/continuous/opc2ret.jpg> <./images/continuous/ret2opc.jpg> <./images/continuous/nosdn.jpg> <./images/discrete/D_TC=1.jpg> <./images/discrete/D_TC=5.jpg> <./images/discrete/D_TC=20.jpg>] [6 <./images/discrete/D_clamp.jpg> <./images/discrete/no_bias_term.jpg> <./images/discrete/no_trust_region.jpg> <./images/discrete/D_ret2opc.jpg>] (./report.aux)
 Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: D3AE1318FA889D72521C717CCD9C4A67;718.
  ) 
 Here is how much of TeX's memory you used:
- 12957 strings out of 478268
- 204608 string characters out of 5846348
- 535855 words of memory out of 5000000
- 30840 multiletter control sequences out of 15000+600000
- 496076 words of font info for 116 fonts, out of 8000000 for 9000
+ 14641 strings out of 478268
+ 238739 string characters out of 5846348
+ 558875 words of memory out of 5000000
+ 32436 multiletter control sequences out of 15000+600000
+ 505929 words of font info for 145 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 70i,10n,76p,1053b,342s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on report.pdf (4 pages, 309539 bytes).
+ 70i,10n,76p,1053b,344s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on report.pdf (6 pages, 698948 bytes).
 PDF statistics:
- 125 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
- 32814 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 206 PDF objects out of 1000 (max. 8388607)
+ 139 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 42115 words of extra memory for PDF output out of 42996 (max. 10000000)
 
