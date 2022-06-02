@@ -1,3 +1,22 @@
 \section{Empirical Evaluation}
 \label{section:evaluation}
 Please showcase your empirical results in this section. Please clearly specify which sets of experiments of the original paper are considered in your report. Please also report the corresponding hyperparameters of each experiment.
+
+
+1. remove the entropy term
+
+2. consider the parameter TRUST_REGION_CONSTRAINT
+3. drop the bias term 
+4. remove the clamping on the actor loss
+5. change the truncation parameter
+6. change Q_opc to Q_ret 
+7. change Q_ret to Q_opc
+8. change the power term of truncated importance weight from 1/d to 1 / e^d 
+9. replace sdn structure to two independent networks
+
+
+\begin{figure}
+\caption{clamp the actor loss under continuous}
+\includegraphics[scale=0.5, width=\textwidth]{continuous/clamp.jpg}
+\end{figure}
+    
