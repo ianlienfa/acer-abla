@@ -1,10 +1,38 @@
 \section{Conclusion}
 \label{section:conclusion}
-Please provide succinct concluding remarks for your report. You may discuss the following aspects:
-\begin{itemize}
-    \item The potential future research directions
-    \item Any technical limitations
-    \item Any latest results on the problem of interest
-\end{itemize}
+
+
+\subsection{latest results on related researches}
+\begin{enumerate}
+    \item \textbf{Refomulating the estimator to provide even smaller variance}\\
+    Including ACER, popular methods in Off-policy learning such as DDPG, TD3, or DPG all have 
+    distribution mismatch between the sampling and visitation distribution of updated policy, hence
+    are not provably converge in function approximation settings.
+    Recently, efforts have been made to address the distribution mismatch problem and to reduce the variance. 
+    Doubly Robust estimator has been proved to largely reduce variance
+    In \cite{xu2021doubly}, a new doubly robust off-policy actor-critic is proposed to be provably converge 
+    with the overall convergence also being doubly robust to the function approximation errors
+
+    \item \textbf{Allow efficient multi-agent}\\
+    Training RL agent on high-dimensional pixel input is sample inefficient especially in the multi-agent setting since agents not only need to interact with the environment but also with other agents. 
+    \cite{9747378} introduces MASRL, a simple but effective self-supervised task: predicting a learning agent’s opponent’s future move. 
+    In doing this, the agent learns a stronger representation from this additional signal, focusing not only on itself but also on its opponent.
+    By understanding and anticipating the opponent’s future moves, MASRL allows the learning agent to develop effective strategies for opponent exploitation.
+    In the paper "COMPETITIVE MULTI-AGENT REINFORCEMENT LEARNING WITH SELF-SUPERVISED REPRESENTATION", MASRL not only stabilizes training, improves sample efficiency, but also allows the agent
+    to generalize and adapt its playing strategy to other unseen expert opponents.
+
+    \item \textbf{Efficient experience replay}\\
+    We can try to focus on the more efficient experience replay, such as hindsight experience replay and prioritized experience replay, or add some noises when doing sample.
+    Hindsight experience replay \cite{lee2021deep} is referred to a efficiently sampling method which can improve the performance of the deep reinforcement learning by making agent to learn from both failures and successes.
+    Prioritized experience replay \cite{schaul2015prioritized} can also make the deep reinforcement learning algorithm learn more efficiently. Besides, it demonstrates state-of-the-art data efficiency on most of the environment.
+    \\  
+    As we known experience replay approaches have an advantage of breaking the temporal correlations in the data achieved by the agent. 
+    It causes the data independent and identically distributed (i.i.d). With this advantage, it is better for learning the Q function by using supervised learning approaches such as deep neural networks. That is to say, if the reinforcement learning algorithm is not supervised learning approaches, the effect won’t be significant. 
+    \\
+    In the recent research, there are more and more studies focus on neural networks. However, when they attempt to sequentially learn, they tend to learn the new task while catastrophically forgetting previous ones. 
+    The paper \cite{atkinson2021pseudo} applied a model to deal with this problem. The model decomposed memory system into two parts. 
+    The first part was continuous learning from reinforcement learning and the second part was a pseudo-rehearsal system that "recalls" items representing previous tasks through a deep generative network. 
+    This result showed that it do not need to require additional storage requirements, store raw data or revisit past tasks when the number of tasks increased. Also, it had a better performance. 
+\end{enumerate}
 
 
