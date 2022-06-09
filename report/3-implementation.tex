@@ -16,4 +16,15 @@ As for the part of ablations, we conduct the following alterations.
 9. replace sdn structure to two independent networks
 
 1~5 are conducted under both discrete and continuous environments, while 6~9 are only considered under continuous environment.
-
+4. remove the clamping on the actor loss
+In both environments, the result gets worse after we remove the clamping function. The reward would change slightly after certain episodes.
+5. change the truncation parameter 
+It appears that the results of each corresponding hyperparameters are almost the same in the last few episodes. 
+6. change Qopc to Qret 
+The result is worse after we conduct the state-action value replacement.
+7. change Qret to Qopc 
+The result is also worse after we conduct the state-action value replacement. Moreover, the reward would remain unchanged after some episode.
+8. change the power term of truncated importance weight from $1/d$ to $1/e^d$
+The change leads to a better performane, since d is the dimensionality of the action space. The alteration causes smaller truncated importane weight.
+9. replace sdn structure to two independent networks
+The result gets worse after replacing the original network to two independent networks. The reward would change slightly after certain episodes.

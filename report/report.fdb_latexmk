@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex report"] 1654157611 "report.aux" "report.bbl" "report" 1654159273
+["bibtex report"] 1654743658 "report.aux" "report.bbl" "report" 1654743660
   "/usr/local/texlive/2022/texmf-dist/bibtex/bst/natbib/unsrtnat.bst" 1233624470 24550 a41a6405f4de768c43e871d9fbce2bc8 ""
   "reference.bib" 0 -1 0 ""
-  "report.aux" 1654159273 5670 2d36057ebcd26865a4346a1b8abd88ff "pdflatex"
+  "report.aux" 1654743659 5670 87c183705c2182872b1d9c08c078b918 "pdflatex"
   (generated)
   "report.bbl"
   "report.blg"
-["pdflatex"] 1654159272 "/Users/linenyan/Documents/Coding/acer-abla/report/report.tex" "report.pdf" "report" 1654159273
+["pdflatex"] 1654743658 "/Users/linenyan/Documents/Coding/acer-abla/report/report.tex" "report.pdf" "report" 1654743660
   "/Users/linenyan/Documents/Coding/acer-abla/report/report.tex" 1654155089 2035 4e0c3266167413a157573ed7389e1746 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
@@ -137,14 +137,14 @@
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
   "1-overview.tex" 1653543389 747 287c3f4ead3c4bacea891b13cae35490 ""
   "2-algorithm.tex" 1653549505 8530 deb48d8b52702449972cc1c4b623702b ""
-  "3-implementation.tex" 1654157173 862 8852b507f1a2d9352d20cea7298b1670 ""
+  "3-implementation.tex" 1654743657 1880 75a6438d57f23ec563c57bacf578c600 ""
   "4-evaluation.tex" 1654159271 4262 d0f02a7f8fbe9e2f240201829b55365e ""
   "5-conclusion.tex" 1654159271 322 891421bf8fb1ead4b2d900598a98f68e ""
   "images/SDN.png" 1654152854 175942 253f733afb0fc424ddf62ecf7cd89dd5 ""
   "images/continuous/clamp.jpg" 1654152854 17092 f86afe2d7b56a93459d529f9752ae7b4 ""
-  "images/continuous/continue_truncation_para=1.jpg" 1654152854 19847 c1e5151371c58613d5f3e3aff7e3b7b4 ""
-  "images/continuous/continue_truncation_para=10.jpg" 1654152854 20213 89b37fad12c4cd254c8c52faba619f9c ""
-  "images/continuous/continue_truncation_para=15.jpg" 1654152854 20007 53dbf401e9dbd056d12208d071e3f8ab ""
+  "images/continuous/continue_truncation_para=1.jpg" 1654742998 20813 6d2f6aa3d94f9b454cfe5bd6c25c7f2b ""
+  "images/continuous/continue_truncation_para=10.jpg" 1654742998 19722 129c40f9150cf5efcd4872cf58fda6dd ""
+  "images/continuous/continue_truncation_para=15.jpg" 1654742998 20104 86d49dcaf8ce329ece31e83f46942033 ""
   "images/continuous/e^d.jpg" 1654152854 19935 5ae3d261d8d4dc48dae0fc87c522284b ""
   "images/continuous/no_bias_term.jpg" 1654152854 19914 57ff4ba42173d0e5f1d8c38a91429492 ""
   "images/continuous/no_trust_region.jpg" 1654152854 19401 b95b8f5d52fe7815d5775d82f95547c9 ""
@@ -159,9 +159,9 @@
   "images/discrete/no_bias_term.jpg" 1654152854 20970 253b44af9c778b9fefed0ab39fcd723b ""
   "images/discrete/no_trust_region.jpg" 1654152854 22413 b6c2d6ffecc6212e02305ec444edb01e ""
   "neurips_2020.sty" 1653543389 11309 0a12e5896af9b3e64d2bb3e796c5eb0a ""
-  "report.aux" 1654159273 5670 2d36057ebcd26865a4346a1b8abd88ff "pdflatex"
-  "report.bbl" 1654157611 275 de5ffaf5b665b622658d80bed97ba2a5 "bibtex report"
-  "report.out" 1654159273 718 d3ae1318fa889d72521c717ccd9c4a67 "pdflatex"
+  "report.aux" 1654743659 5670 87c183705c2182872b1d9c08c078b918 "pdflatex"
+  "report.bbl" 1654743658 275 de5ffaf5b665b622658d80bed97ba2a5 "bibtex report"
+  "report.out" 1654743659 718 d3ae1318fa889d72521c717ccd9c4a67 "pdflatex"
   "report.tex" 1654155089 2035 4e0c3266167413a157573ed7389e1746 ""
   (generated)
   "report.aux"
